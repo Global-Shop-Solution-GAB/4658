@@ -1,0 +1,455 @@
+Program.Sub.ScreenSU.Start
+gui.frmMsgs..create
+gui.frmMsgs..caption("GUI Messaging")
+gui.frmMsgs..size(9600,6375)
+gui.frmMsgs..minx(0)
+gui.frmMsgs..miny(0)
+gui.frmMsgs..position(0,0)
+gui.frmMsgs..event(mouseup,gsfgguimsgs_commandclick)
+gui.frmMsgs..event(unload,frmmsgs_unload)
+gui.frmMsgs..alwaysontop(False)
+gui.frmMsgs..fontname("Arial")
+gui.frmMsgs..fontsize(8)
+gui.frmMsgs..forecolor(0)
+gui.frmMsgs..fontstyle(,,,,)
+gui.frmMsgs..BackColor(15724527)
+gui.frmMsgs..controlbox(True)
+gui.frmMsgs..maxbutton(False)
+gui.frmMsgs..minbutton(True)
+gui.frmMsgs..mousepointer(0)
+gui.frmMsgs..moveable(True)
+gui.frmMsgs..sizeable(False)
+gui.frmMsgs..ShowInTaskBar(True)
+gui.frmMsgs..titlebar(True)
+gui.frmMsgs.frame1.create(frame)
+gui.frmMsgs.frame1.caption("Add A New Message")
+gui.frmMsgs.frame1.size(6900,1455)
+gui.frmMsgs.frame1.position(2300,200)
+gui.frmMsgs.frame1.visible(True)
+gui.frmMsgs.frame1.borderstyle(0)
+gui.frmMsgs.frame1.fontname("Arial")
+gui.frmMsgs.frame1.fontsize(8)
+gui.frmMsgs.frame2.create(frame)
+gui.frmMsgs.frame2.caption("Messages")
+gui.frmMsgs.frame2.size(9000,3840)
+gui.frmMsgs.frame2.position(200,1800)
+gui.frmMsgs.frame2.visible(True)
+gui.frmMsgs.frame2.borderstyle(0)
+gui.frmMsgs.frame2.fontname("Arial")
+gui.frmMsgs.frame2.fontsize(8)
+gui.frmMsgs.ddlEmpl.create(dropdownlist)
+gui.frmMsgs.ddlEmpl.visible(True)
+gui.frmMsgs.ddlEmpl.size(1890,330)
+gui.frmMsgs.ddlEmpl.zorder(0)
+gui.frmMsgs.ddlEmpl.position(200,425)
+gui.frmMsgs.ddlEmpl.enabled(True)
+gui.frmMsgs.ddlEmpl.fontname("Arial")
+gui.frmMsgs.ddlEmpl.fontsize(8)
+gui.frmMsgs.ddlEmpl.event(click,ddlempl_change)
+gui.frmMsgs.ddlEmpl.defaultvalue("")
+gui.frmMsgs.ddlEmpl.controlgroup(0)
+gui.frmMsgs.lbl1.create(label,"Employee",True,1935,255,1,245,200,True,0,Arial,8,15790320,0)
+gui.frmMsgs.lbl1.defaultvalue("")
+gui.frmMsgs.lbl1.controlgroup(0)
+gui.frmMsgs.mltxt1.create(textboxm)
+gui.frmMsgs.mltxt1.text("")
+gui.frmMsgs.mltxt1.visible(True)
+gui.frmMsgs.mltxt1.size(5715,1110)
+gui.frmMsgs.mltxt1.zorder(0)
+gui.frmMsgs.mltxt1.position(110,235)
+gui.frmMsgs.mltxt1.enabled(True)
+gui.frmMsgs.mltxt1.borderstyle(1)
+gui.frmMsgs.mltxt1.alignment(0)
+gui.frmMsgs.mltxt1.parent("frame1")
+gui.frmMsgs.mltxt1.fontname("Arial")
+gui.frmMsgs.mltxt1.fontsize(8)
+gui.frmMsgs.mltxt1.numericonly(0)
+gui.frmMsgs.mltxt1.maxLength(256)
+gui.frmMsgs.mltxt1.BackColor(16777215)
+gui.frmMsgs.mltxt1.defaultvalue("")
+gui.frmMsgs.mltxt1.controlgroup(0)
+gui.frmMsgs.btnAdd.create(button)
+gui.frmMsgs.btnAdd.caption("Add")
+gui.frmMsgs.btnAdd.visible(True)
+gui.frmMsgs.btnAdd.size(855,375)
+gui.frmMsgs.btnAdd.zorder(0)
+gui.frmMsgs.btnAdd.position(5905,245)
+gui.frmMsgs.btnAdd.enabled(True)
+gui.frmMsgs.btnAdd.parent("frame1")
+gui.frmMsgs.btnAdd.fontname("Arial")
+gui.frmMsgs.btnAdd.fontsize(8)
+gui.frmMsgs.btnAdd.event(click,btnadd_click)
+gui.frmMsgs.btnAdd.defaultvalue("")
+gui.frmMsgs.btnAdd.controlgroup(0)
+gui.frmMsgs.btnClear.create(button)
+gui.frmMsgs.btnClear.caption("Clear")
+gui.frmMsgs.btnClear.visible(True)
+gui.frmMsgs.btnClear.size(855,375)
+gui.frmMsgs.btnClear.zorder(0)
+gui.frmMsgs.btnClear.position(5915,685)
+gui.frmMsgs.btnClear.enabled(True)
+gui.frmMsgs.btnClear.parent("frame1")
+gui.frmMsgs.btnClear.fontname("Arial")
+gui.frmMsgs.btnClear.fontsize(8)
+gui.frmMsgs.btnClear.event(click,btnclear_click)
+gui.frmMsgs.btnClear.defaultvalue("")
+gui.frmMsgs.btnClear.controlgroup(0)
+gui.frmMsgs.gsfgGUIMsgs.create(gsflexgrid)
+gui.frmMsgs.gsfgGUIMsgs.FixedRows(0)
+gui.frmMsgs.gsfgGUIMsgs.FixedCols(0)
+gui.frmMsgs.gsfgGUIMsgs.visible(True)
+gui.frmMsgs.gsfgGUIMsgs.size(8790,3180)
+gui.frmMsgs.gsfgGUIMsgs.zorder(0)
+gui.frmMsgs.gsfgGUIMsgs.position(100,560)
+gui.frmMsgs.gsfgGUIMsgs.enabled(True)
+gui.frmMsgs.gsfgGUIMsgs.parent("frame2")
+gui.frmMsgs.gsfgGUIMsgs.event(commandclick,gsfgguimsgs_commandclick)
+gui.frmMsgs.chkShowRead.create(checkbox)
+gui.frmMsgs.chkShowRead.caption("Show Read")
+gui.frmMsgs.chkShowRead.visible(True)
+gui.frmMsgs.chkShowRead.size(1680,255)
+gui.frmMsgs.chkShowRead.zorder(0)
+gui.frmMsgs.chkShowRead.position(200,290)
+gui.frmMsgs.chkShowRead.enabled(True)
+gui.frmMsgs.chkShowRead.alignment(0)
+gui.frmMsgs.chkShowRead.parent("frame2")
+gui.frmMsgs.chkShowRead.fontname("Arial")
+gui.frmMsgs.chkShowRead.fontsize(8)
+gui.frmMsgs.chkShowRead.event(click,chkshowread_click)
+gui.frmMsgs.chkShowRead.event(commandclick,gsfgguimsgs_commandclick)
+gui.frmMsgs.chkShowRead.defaultvalue("0")
+gui.frmMsgs.chkShowRead.controlgroup(0)
+gui.frmMsgs.ddlEmpl.tabstop(True)
+gui.frmMsgs.ddlEmpl.tabindex(2)
+gui.frmMsgs.mltxt1.tabstop(True)
+gui.frmMsgs.mltxt1.tabindex(4)
+gui.frmMsgs.btnAdd.tabstop(True)
+gui.frmMsgs.btnAdd.tabindex(5)
+gui.frmMsgs.btnClear.tabstop(True)
+gui.frmMsgs.btnClear.tabindex(6)
+gui.frmMsgs.chkShowRead.tabstop(True)
+gui.frmMsgs.chkShowRead.tabindex(8)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Send Messages to GUI for Employee(s)
+'By Josh Withrow
+'Authored 10/21/2014
+' RGRC 021816
+'Idea came from a conversation with Detroit Tube.
+
+'INFO
+'15755 employee scan
+'15921  EMPLOYEE ACTIVATED BY CLICK
+'009993 - Employee ID/Badge ID
+
+F.ODBC.Connection!Conn.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'Check that MSGs and OPTIONS tables exist.  If not, this will create the tables and in the case of OPTS,
+'will initialize any required OPTS.
+F.Intrinsic.Control.CallSub(Checkdb)
+'Purge (read DELETE) messages older than PURGEDAYS (OPTs table)
+F.Intrinsic.Control.CallSub(Cleandb)
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+	F.Intrinsic.Control.Case(15755)
+		'Employee scanned...  get messages/notifications
+		F.Intrinsic.Control.CallSub(Getmsgs)
+	F.Intrinsic.Control.Case(15921)
+		'Employee activated (click)...  get messages/notifications
+		F.Intrinsic.Control.CallSub(Getmsgs)
+	F.Intrinsic.Control.CaseElse
+		'My best guess is that the menu item was clicked to add/delete/mark read/unread messages
+		F.Intrinsic.Control.CallSub(Buildstyles)
+		F.Intrinsic.Control.CallSub(Ddlempl_load)
+		Gui.frmMsgs..Show
+F.Intrinsic.Control.EndSelect
+
+Program.Sub.Main.End
+
+Program.Sub.CheckDB.Start
+V.Local.sSQL.Declare(String)
+V.Local.bTableExists.Declare(Boolean)
+V.Local.sPurgedaysExists.Declare(String)
+V.Local.sPurgedays.Declare(String)
+V.Local.bIsNumeric.Declare(Boolean)
+
+F.Intrinsic.UI.InvokeWaitDialog("Checking database...","Setting Up")
+
+F.ODBC.Connection!Conn.TableExists("GAB_GUI_USERMSGS",V.Local.bTableExists)
+F.Intrinsic.Control.If(V.Local.bTableExists,=,False)
+	V.Local.sSQL.Set("CREATE TABLE GAB_GUI_USERMSGS(")
+	V.Local.sSQL.Append("MESSAGEID IDENTITY ,")
+	V.Local.sSQL.Append("MESSAGE VARCHAR(256) NOT NULL ,")
+	V.Local.sSQL.Append("CREATEDBY CHAR(8) NOT NULL ,")
+	V.Local.sSQL.Append("CREATEDON DATETIME NOT NULL DEFAULT NOW() ,")
+	V.Local.sSQL.Append("EMPL CHAR(5) NOT NULL ,")
+	V.Local.sSQL.Append("READ BIT DEFAULT '0' NOT NULL ,")
+	V.Local.sSQL.Append("PRIMARY KEY (MESSAGEID));")
+	F.ODBC.Connection!Conn.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!Conn.TableExists("GAB_GUI_USERMSGS_OPT",V.Local.bTableExists)
+F.Intrinsic.Control.If(V.Local.bTableExists,=,False)
+	V.Local.sSQL.Set("CREATE TABLE GAB_GUI_USERMSGS_OPT(")
+	V.Local.sSQL.Append("OPTIONNAME VARCHAR(64) NOT NULL ,")
+	V.Local.sSQL.Append("OPTIONVALUE VARCHAR(64) NOT NULL );")
+	V.Local.sSQL.Append("PRIMARY KEY (OPTIONNAME));")
+	F.ODBC.Connection!Conn.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!Conn.ExecuteAndReturn("SELECT COUNT(*) FROM GAB_GUI_USERMSGS_OPT WHERE OPTIONNAME='PURGEDAYS'",V.Local.sPurgedaysExists)
+F.Intrinsic.Control.If(V.Local.sPurgedaysExists,<,1)
+	F.Intrinsic.Control.Label("PromptPurgeDays")
+	F.Intrinsic.UI.Inputbox("How many days should these messages be retained for?  They will automatically be purged when they are older than the number of days entered.","Set Option","90",V.Local.sPurgedays)
+	F.Intrinsic.Math.IsNumeric(V.Local.sPurgedays,V.Local.bIsNumeric)
+	F.Intrinsic.Control.If(V.Local.bIsNumeric,=,False)
+		F.Intrinsic.UI.Msgbox("Value not numeric!  Only supply whole numbers.","Not numberic")
+		F.Intrinsic.Control.GoTo("PromptPurgeDays")
+	F.Intrinsic.Control.EndIf
+	V.Local.sSQL.Set("INSERT INTO GAB_GUI_USERMSGS_OPT (OPTIONNAME, OPTIONVALUE) VALUES ('PURGEDAYS','{0}')")
+	F.Intrinsic.String.Build(V.Local.sSQL,V.Local.sPurgedays,V.Local.sSQL)
+	F.ODBC.Connection!Conn.Execute(V.Local.sSQL)
+F.Intrinsic.Control.ElseIf(V.Local.sPurgedaysExists,>,1)
+	F.ODBC.Connection!Conn.Execute("DELETE FROM GAB_GUI_USERMSGS_OPT;")
+	F.Intrinsic.Control.GoTo("PromptPurgeDays")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.CloseWaitDialog
+
+Program.Sub.CheckDB.End
+
+program.sub.gsfgguimsgs_commandclick.start
+
+V.Local.iMessageID.Declare(Long)
+V.Local.sMarkRead.Declare(String,"UPDATE GAB_GUI_USERMSGS SET READ=1 WHERE MESSAGEID={0}")
+V.Local.sMarkUnread.Declare(String,"UPDATE GAB_GUI_USERMSGS SET READ=0 WHERE MESSAGEID={0}")
+V.Local.sDelete.Declare(String,"DELETE FROM GAB_GUI_USERMSGS WHERE MESSAGEID={0}")
+
+Gui.frmMsgs.gsfgGUIMsgs.GetTextMatrix(0,V.Args.Key,V.Local.iMessageID)
+
+F.Intrinsic.Control.SelectCase(V.Args.Column)
+	F.Intrinsic.Control.Case(2)
+		'Mark read/unread clicked
+		F.Intrinsic.Control.If(V.Screen.frmMsgs!chkShowRead.Value,=,1)
+			F.Intrinsic.String.Build(V.Local.sMarkUnread,V.Local.iMessageID,V.Local.sMarkUnread)
+			F.ODBC.Connection!Conn.Execute(V.Local.sMarkUnread)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build(V.Local.sMarkRead,V.Local.iMessageID,V.Local.sMarkRead)
+			F.ODBC.Connection!Conn.Execute(V.Local.sMarkRead)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case(3)
+		'Delete clicked
+		F.Intrinsic.String.Build(V.Local.sDelete,V.Local.iMessageID,V.Local.sDelete)
+		F.ODBC.Connection!Conn.Execute(V.Local.sDelete)
+	F.Intrinsic.Control.CaseElse
+		'Not sure what was clicked...  lets do nothing!
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.CallSub(Gsfgguimsgs_load)
+
+
+
+program.sub.gsfgguimsgs_commandclick.end
+
+program.sub.btnadd_click.start
+
+V.Local.sEMPL.Declare(String)
+V.Local.iItems.Declare(Long)
+V.Local.iCount.Declare(Long,0)
+V.Local.sSQL.Declare(String)
+V.Local.sText.Declare(String)
+
+F.Intrinsic.Hash.LookupByKey("Employees",V.Screen.frmMsgs!ddlEmpl.ItemData,True,V.Local.sEMPL)
+F.Intrinsic.Hash.ItemCount("Employees",V.Local.iItems)
+
+F.Intrinsic.Control.If(V.Screen.frmMsgs!ddlEmpl.ListIndex,=,0)
+	F.Intrinsic.Control.For(V.Local.iCount,1,V.Local.iItems,1)
+		V.Local.sSQL.Set("INSERT INTO GAB_GUI_USERMSGS (MESSAGE, CREATEDBY, EMPL) VALUES ('{0}','{1}','{2}')")
+		F.Intrinsic.Hash.LookupByKey("Employees",V.Local.iCount,True,V.Local.sEMPL)
+		F.Intrinsic.String.Replace(V.Screen.frmMsgs!mltxt1.Text,"'","''",V.Local.sText)
+		F.Intrinsic.String.Build(V.Local.sSQL,V.Local.sText,V.Caller.User,V.Local.sEMPL,V.Local.sSQL)
+		F.ODBC.Connection!Conn.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.Next(V.Local.iCount)
+	F.Intrinsic.UI.Msgbox("Message sent to all employees.","Message Sent")
+F.Intrinsic.Control.Else
+	V.Local.sSQL.Set("INSERT INTO GAB_GUI_USERMSGS (MESSAGE, CREATEDBY, EMPL) VALUES ('{0}','{1}','{2}')")
+	F.Intrinsic.String.Replace(V.Screen.frmMsgs!mltxt1.Text,"'","''",V.Local.sText)
+	F.Intrinsic.String.Build(V.Local.sSQL,V.Local.sText,V.Caller.User,V.Local.sEMPL,V.Local.sSQL)
+	F.ODBC.Connection!Conn.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(Btnclear_click)
+F.Intrinsic.Control.CallSub(Gsfgguimsgs_load)
+
+program.sub.btnadd_click.end
+
+program.sub.btnclear_click.start
+
+Gui.frmMsgs.mltxt1.Text("")
+
+program.sub.btnclear_click.end
+
+program.sub.ddlempl_change.start
+
+F.Intrinsic.Control.CallSub(Btnclear_click)
+F.Intrinsic.Control.CallSub(Gsfgguimsgs_load)
+
+program.sub.ddlempl_change.end
+
+program.sub.frmmsgs_unload.start
+F.Intrinsic.Control.If(V.ODBC.Conn.State,=,1)
+	F.ODBC.Connection!Conn.Close
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.End
+
+program.sub.frmmsgs_unload.end
+
+Program.Sub.GetMsgs.Start
+
+V.Local.sSQL.Declare(String)
+V.Local.sMsg.Declare(String)
+V.Local.sTitle.Declare(String)
+
+V.Local.sSQL.Set("SELECT * FROM GAB_GUI_USERMSGS WHERE EMPL='{0}' AND READ=0 ORDER BY CREATEDON")
+F.Intrinsic.String.Build(V.Local.sSQL,V.Passed.009993,V.Local.sSQL)
+
+F.ODBC.Connection!Conn.OpenLocalRecordsetRW("RS",V.Local.sSQL)
+	F.Intrinsic.Control.DoUntil(V.ODBC.Conn!RS.EOF,=,True)
+		V.Local.sTitle.Set("MESSAGE FROM {0} ON {1}")
+		V.Local.sMsg.Set(V.ODBC.Conn!RS.FieldValTrim!MESSAGE)
+		F.Intrinsic.String.Build(V.Local.sTitle,V.ODBC.Conn!RS.FieldValTrim!CREATEDBY,V.ODBC.Conn!RS.FieldValTrim!CREATEDON,V.Local.sTitle)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg,V.Local.sTitle)
+		F.ODBC.Conn!RS.Set!READ(1)
+		F.ODBC.Conn!RS.Update
+		F.ODBC.Conn!RS.MoveNext
+	F.Intrinsic.Control.Loop
+F.ODBC.Conn!RS.Close
+
+'F.Intrinsic.Control.If(V.ODBC.Conn.State,=,1)
+'	F.ODBC.Connection!Conn.Close
+'F.Intrinsic.Control.EndIf
+
+Program.Sub.GetMsgs.End
+
+Program.Sub.CleanDB.Start
+
+V.Local.sPurgeDays.Declare(String)
+V.Local.sSQL.Declare(String)
+
+V.Local.sSQL.Set("SELECT OPTIONVALUE FROM GAB_GUI_USERMSGS_OPT WHERE OPTIONNAME='PURGEDAYS'")
+F.ODBC.Connection!Conn.ExecuteAndReturn(V.Local.sSQL,V.Local.sPurgeDays)
+
+V.Local.sSQL.Set("DELETE FROM GAB_GUI_USERMSGS WHERE DATEDIFF(day,CREATEDON,CURRENT_DATE())>{0}")
+F.Intrinsic.String.Build(V.Local.sSQL,V.Local.sPurgeDays,V.Local.sSQL)
+
+F.ODBC.Connection!Conn.Execute(V.Local.sSQL)
+
+Program.Sub.CleanDB.End
+
+Program.Sub.ddlEmpl_Load.Start
+
+V.Local.i.Declare(Long,1)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading employees...","Setting Up")
+
+Gui.frmMsgs.ddlEmpl.AddItem("All Employees",0)
+
+F.ODBC.Connection!Conn.OpenLocalRecordsetRO("RS","SELECT DISTINCT EMPLOYEE, NAME FROM V_EMPLOYEE_MSTR ORDER BY NAME")
+	F.Intrinsic.Control.DoUntil(V.ODBC.Conn!RS.EOF,=,True)
+		F.Intrinsic.Hash.AddItem("Employees",V.Local.i,V.ODBC.Conn!RS.FieldValTrim!EMPLOYEE)
+		Gui.frmMsgs.ddlEmpl.AddItem(V.ODBC.Conn!RS.FieldValTrim!NAME,V.Local.i)
+		F.Intrinsic.Math.Add(V.Local.i,1,V.Local.i)
+		F.ODBC.Conn!RS.MoveNext
+	F.Intrinsic.Control.Loop
+F.ODBC.Conn!RS.Close
+
+F.Intrinsic.UI.CloseWaitDialog
+
+Program.Sub.ddlEmpl_Load.End
+
+Program.Sub.BuildStyles.Start
+V.Local.sTitles.Declare(String)
+V.Local.i.Declare(Long)
+
+'F.Intrinsic.UI.InvokeWaitDialog("Building grid...","Setting Up")
+
+Gui.frmMsgs.gsfgGUIMsgs.ClearStyle(2)
+
+Gui.frmMsgs.gsfgGUIMsgs.Rows(1)
+Gui.frmMsgs.gsfgGUIMsgs.Cols(4)
+Gui.frmMsgs.gsfgGUIMsgs.Rows(2)
+
+Gui.frmMsgs.gsfgGUIMsgs.SetColumnPercentages(".1:.7:.1:.1")
+
+F.Intrinsic.String.Split("ID*!*Message*!**!*","*!*",V.Local.sTitles)
+
+F.Intrinsic.Control.For(V.Local.i,0,V.Local.sTitles.UBound,1)
+	Gui.frmMsgs.gsfgGUIMsgs.TextMatrix(V.Local.i,0,V.Local.sTitles(V.Local.i))
+	Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(1,V.Local.i,"Type","Locked","True")
+	Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(1,V.Local.i,"Format","Alignment","2")
+F.Intrinsic.Control.Next(V.Local.i)
+Gui.frmMsgs.gsfgGUIMsgs.ApplyStyle(0,1)
+Gui.frmMsgs.gsfgGUIMsgs.FixedRows(1)
+
+Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,0,"Type","Locked","True")
+Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,0,"Format","Alignment","1")
+
+Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,1,"Type","Locked","True")
+Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,1,"Format","Alignment","1")
+
+F.Intrinsic.Control.If(V.Screen.frmMsgs!chkShowRead.Value,=,1)
+	Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,2,"Type","Command","Unread")
+F.Intrinsic.Control.Else
+	Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,2,"Type","Command","Read")
+F.Intrinsic.Control.EndIf
+Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,2,"Format","Alignment","2")
+
+Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,3,"Type","Command","Delete")
+Gui.frmMsgs.gsfgGUIMsgs.BuildStyle(2,3,"Format","Alignment","2")
+
+'F.Intrinsic.UI.CloseWaitDialog
+
+
+Program.Sub.BuildStyles.End
+
+Program.Sub.gsfgguimsgs_load.Start
+
+V.Local.sEMPL.Declare(String)
+V.Local.sSQL.Declare(String,"SELECT MESSAGEID, MESSAGE FROM GAB_GUI_USERMSGS WHERE EMPL='{0}' AND READ={1} ORDER BY CREATEDON")
+V.Local.iRows.Declare(Long)
+F.Intrinsic.Hash.LookupByKey("Employees",V.Screen.frmMsgs!ddlEmpl.ItemData,True,V.Local.sEMPL)
+F.Intrinsic.String.Build(V.Local.sSQL,V.Local.sEMPL,V.Screen.frmMsgs!chkShowRead.Value,V.Local.sSQL)
+
+F.ODBC.Connection!Conn.OpenLocalRecordsetRO("RS",V.Local.sSQL)
+Gui.frmMsgs.gsfgGUIMsgs.Visible(False)
+Gui.frmMsgs.gsfgGUIMsgs.Rows(2)
+F.Intrinsic.Control.CallSub(Buildstyles)
+Gui.frmMsgs.gsfgGUIMsgs.LoadRecordset("Conn!RS",2,False)
+V.Local.iRows.Set(V.Screen.frmMsgs!gsfgGUIMsgs.Rows)
+F.Intrinsic.Control.If(V.Screen.frmMsgs!gsfgGUIMsgs.Rows,>,1)
+	F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+	Gui.frmMsgs.gsfgGUIMsgs.Rows(V.Local.iRows)
+F.Intrinsic.Control.EndIf
+F.ODBC.Conn!RS.Close
+
+Gui.frmMsgs.gsfgGUIMsgs.Visible(True)
+
+Program.Sub.gsfgguimsgs_load.End
+
+program.sub.chkshowread_click.start
+
+F.Intrinsic.Control.CallSub(Gsfgguimsgs_load)
+
+program.sub.chkshowread_click.end
+
+Program.Sub.Comments.Start
+${$0$}$GAB_GUI_USERMSGS$}$SUPERVSR$}$10/14/2014
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Update Contract Part Price From Quote Lines or Order Lines
+Program.Sub.Comments.End
